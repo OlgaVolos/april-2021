@@ -6,7 +6,7 @@ const Comments = () => {
     const [comments, setComments] = useState([]);
     useEffect(() => {
         getComments().then(value => {
-            setComments(value.data);
+            setComments([...value.data]);
             console.log(value.data);
         })
     }, [])

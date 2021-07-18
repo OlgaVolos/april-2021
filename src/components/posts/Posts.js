@@ -6,7 +6,7 @@ const Posts = () => {
     const [posts, setPosts] = useState([]);
     useEffect( ()=> {
         getPosts().then(value => {
-            setPosts(value.data);
+            setPosts([...value.data]);
             console.log(value.data);
         })
     }, [] )
