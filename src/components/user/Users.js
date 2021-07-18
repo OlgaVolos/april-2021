@@ -5,12 +5,12 @@ import User from "./User";
 const Users = () => {
     const [users, setUsers] = useState([]);
 
-    useEffect(()=>{
-        getUsers().then(value => setUsers(value.data) )
+    useEffect(() => {
+        getUsers().then(value => setUsers(value.data))
     }, [])
     return (
         <div>
-            {users.map(user=> <User key={user.id} item={user}/>)}
+            {users.map(user => <User key={user.id} item={user}/>)}
         </div>
     );
 }

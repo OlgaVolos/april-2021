@@ -1,5 +1,4 @@
-import React, {useEffect, useState} from 'react';
-import {getUserPosts} from "../../services/API";
+import React from 'react';
 import Post from "./Post";
 
 const Posts = ({postList}) => {
@@ -7,7 +6,7 @@ const Posts = ({postList}) => {
     return (
         <div>
             {
-                postList.map(value=> <Post key={value.id} post={value} />)
+                postList.map(value => <Post key={value.id} post={value}/>)
             }
         </div>
     );
